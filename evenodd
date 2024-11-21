@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract EvenOdd {
+
+    // Function to check if a number is even or odd
+    // Takes an unsigned integer as input
+    // Returns a boolean indicating if the number is even (true) or odd (false)
+    function isEven(uint256 number) public pure returns (bool) {
+        // If the number modulo 2 equals 0, it means it's even
+        // This is because even numbers divide evenly by 2, leaving no remainder
+        if (number % 2 == 0) {
+            return true;  // The number is even
+        } else {
+            return false; // The number is odd
+        }
+    }
+}
