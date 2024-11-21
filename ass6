@@ -1,0 +1,21 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract EnhancedStorage {
+    // State variable to store the value
+    uint private storedValue;
+
+    // Event to log value changes
+    event ValueChanged(uint newValue);
+
+    // Function to set the value and emit an event
+    function setValue(uint _value) public {
+        storedValue = _value;
+        emit ValueChanged(_value); // Emit the event when value changes
+    }
+
+    // Function to get the value
+    function getValue() public view returns (uint) {
+        return storedValue;
+    }
+}
